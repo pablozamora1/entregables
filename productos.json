@@ -1,0 +1,20 @@
+[
+  {
+    "id": 2,
+    "title": "arroz",
+    "description": "los que no se pasan",
+    "price": 150,
+    "thumbnail": "sin imagen",
+    "code": "abc124",
+    "stock": 30
+  },
+  {
+    "id": 3,
+    "title": "aceite",
+    "description": "caraso",
+    "price": 150,
+    "thumbnail": "sin imagen",
+    "code": "abc126",
+    "stock": 30
+  }
+]
