@@ -104,16 +104,16 @@ class ProductManager {
 const productos = new ProductManager("./productos.json");
 console.log(productos.getProducts());
 
-const fideos = {
-  title: "fideos",
-  description: "los mas ricos",
-  price: 150,
+const notebook = {
+  title: "notebook",
+  description: "la mas rapida",
+  price: 150000,
   thumbnail: "sin imagen",
   code: "abc123",
   stock: 30,
 };
 
-productos.addProduct(fideos);
+productos.addProduct(notebook);
 
 const arroz = {
   title: "arroz",
@@ -126,27 +126,27 @@ const arroz = {
 
 productos.addProduct(arroz);
 
-const aceite = {
-  title: "aceite",
-  description: "caraso",
-  price: 150,
+const mouse = {
+  title: "mouse",
+  description: "barataso",
+  price: 570,
   thumbnail: "sin imagen",
   code: "abc126",
   stock: 30,
 };
 
-productos.addProduct(aceite);
+productos.addProduct(mouse);
 
-const salsa = {
-  title: "salsa",
-  description: "salsa",
-  price: 150,
+const pendriver = {
+  title: "pendriver",
+  description: "de 1 64gb",
+  price: 9730,
   thumbnail: "sin imagen",
   code: "abc127",
   stock: 30,
 };
 
-productos.addProduct(aceite);
+productos.addProduct(pendriver);
 
 async function testGetProductById() {
   const buscar = await productos.getProductById(2);
@@ -155,11 +155,11 @@ async function testGetProductById() {
 
 // testGetProductById();
 
-// const salsa = {
+// const telefono = {
 //   id: 1,
-//   title: "salsa de tomates",
-//   description: "caraso",
-//   price: 150,
+//   title: "iphone",
+//   description: "iphoneX",
+//   price: 54674756,
 //   thumbnail: "sin imagen",
 //   code: "abc125",
 //   stock: 30,
