@@ -1,24 +1,15 @@
 [
   {
     "id": 1,
-    "title": "notebook",
-    "description": "la mas rapida",
-    "price": 150000,
+    "title": "pendriver",
+    "description": "de 1 64gb",
+    "price": 9730,
     "thumbnail": "sin imagen",
-    "code": "abc123",
+    "code": "abc127",
     "stock": 30
   },
   {
     "id": 2,
-    "title": "arroz",
-    "description": "los que no se pasan",
-    "price": 150,
-    "thumbnail": "sin imagen",
-    "code": "abc124",
-    "stock": 30
-  },
-  {
-    "id": 3,
     "title": "mouse",
     "description": "barataso",
     "price": 570,
@@ -27,12 +18,21 @@
     "stock": 30
   },
   {
-    "id": 4,
-    "title": "pendriver",
-    "description": "de 1 64gb",
-    "price": 9730,
+    "id": 3,
+    "title": "notebook",
+    "description": "la mas rapida",
+    "price": 150000,
     "thumbnail": "sin imagen",
-    "code": "abc127",
+    "code": "abc123",
+    "stock": 30
+  },
+  {
+    "id": 4,
+    "title": "camara",
+    "description": "camara web",
+    "price": 4570,
+    "thumbnail": "sin imagen",
+    "code": "abc124",
     "stock": 30
   }
 ]

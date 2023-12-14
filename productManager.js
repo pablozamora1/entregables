@@ -6,7 +6,7 @@ class ProductManager {
     this.path = path;
   }
   static id = 0;
-
+  // FUNCION PARA AGREGAR PRODUCTOS
   async addProduct(productObjet) {
     let { title, description, price, thumbnail, code, stock } = productObjet;
 
@@ -54,7 +54,7 @@ class ProductManager {
       console.log("Error al leer el archivo", error);
     }
   }
-
+  // FUNCION PARA LEER EL ARCHIVO JSON
   async readFiles() {
     try {
       const respuesta = await fs.readFile(this.path, "utf-8");
@@ -64,7 +64,7 @@ class ProductManager {
       console.log("Error al leer el archivo", error);
     }
   }
-
+  // FUNCION PARA GUARDAR LOS PRODUCTOS EN UN JSON
   async saveFiles(arrayProductos) {
     try {
       await fs.writeFile(this.path, JSON.stringify(arrayProductos, null, 2));
@@ -72,7 +72,7 @@ class ProductManager {
       console.log("Error al guardar el archivo", error);
     }
   }
-
+  // FUNCION PARA ACTUALIZAR UN PRODUCTO
   async updateProduct(id, updatedProduct) {
     try {
       const arrayProd = await this.readFiles();
@@ -89,7 +89,7 @@ class ProductManager {
       console.log("Error al actualizar el producto", error);
     }
   }
-
+  // FUNCION PARA ELIMINAR UN PRODUCTO
   async deleteProduct(id) {
     try {
       const productDelete = await this.readFiles();
@@ -113,18 +113,14 @@ const notebook = {
   stock: 30,
 };
 
-productos.addProduct(notebook);
-
-const arroz = {
-  title: "arroz",
-  description: "los que no se pasan",
-  price: 150,
+const camara = {
+  title: "camara",
+  description: "camara web",
+  price: 4570,
   thumbnail: "sin imagen",
   code: "abc124",
   stock: 30,
 };
-
-productos.addProduct(arroz);
 
 const mouse = {
   title: "mouse",
@@ -135,8 +131,6 @@ const mouse = {
   stock: 30,
 };
 
-productos.addProduct(mouse);
-
 const pendriver = {
   title: "pendriver",
   description: "de 1 64gb",
@@ -146,33 +140,42 @@ const pendriver = {
   stock: 30,
 };
 
-productos.addProduct(pendriver);
-
-async function testGetProductById() {
-  const buscar = await productos.getProductById(2);
+async function testGetProductById(id) {
+  const buscar = await productos.getProductById(id);
   console.log(buscar);
 }
 
-// testGetProductById();
+const telefono = {
+  id: 2,
+  title: "iphone",
+  description: "iphoneX",
+  price: 54674756,
+  thumbnail: "sin imagen",
+  code: "abc125",
+  stock: 30,
+};
 
-// const telefono = {
-//   id: 1,
-//   title: "iphone",
-//   description: "iphoneX",
-//   price: 54674756,
-//   thumbnail: "sin imagen",
-//   code: "abc125",
-//   stock: 30,
-// };
-
-async function testUpdate() {
-  await productos.updateProduct(1, salsa);
+async function testUpdate(id, objet) {
+  await productos.updateProduct(id, objet);
 }
-
-// testUpdate();
 
 async function deleteProducts(id) {
   await productos.deleteProduct(id);
 }
 
-deleteProducts(1);
+//--------------------------TESTING---------------------------------
+
+//FUNCION PARA AGREGAR UN PRODUCTO
+productos.addProduct(pendriver);
+productos.addProduct(mouse);
+productos.addProduct(notebook);
+productos.addProduct(camara);
+
+// FUNCION PARA ELIMINAR UN PRODUCTO
+// deleteProducts(3);
+
+// FUNCION PARA ACTUALIZAR UN PRODUCTO
+// testUpdate(2, telefono);
+
+// FUNCION PARA BUSCAR UN PRODUCTO
+// testGetProductById(4);
