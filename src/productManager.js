@@ -127,16 +127,64 @@ const mouse = {
   description: "barataso",
   price: 570,
   thumbnail: "sin imagen",
-  code: "abc126",
+  code: "abc125",
   stock: 30,
 };
 
-const pendriver = {
-  title: "pendriver",
-  description: "de 1 64gb",
-  price: 9730,
+const placaVideo = {
+  title: "placaVideo",
+  description: "Rtx3070 de 8gb",
+  price: 97300,
+  thumbnail: "sin imagen",
+  code: "abc126",
+  stock: 30,
+};
+const monitor = {
+  title: "Monitor",
+  description: "24 pulgadas",
+  price: 12730,
   thumbnail: "sin imagen",
   code: "abc127",
+  stock: 30,
+};
+const homeTeather = {
+  title: "homeTeather",
+  description: "muteki 5.2",
+  price: 99730,
+  thumbnail: "sin imagen",
+  code: "abc128",
+  stock: 30,
+};
+const tvLed = {
+  title: "smart-tv",
+  description: "50 pulgadas",
+  price: 46830,
+  thumbnail: "sin imagen",
+  code: "abc129",
+  stock: 30,
+};
+const impresora = {
+  title: "impresora",
+  description: "laser",
+  price: 35780,
+  thumbnail: "sin imagen",
+  code: "abc130",
+  stock: 30,
+};
+const router = {
+  title: "router",
+  description: "fjrg4k-2",
+  price: 12345,
+  thumbnail: "sin imagen",
+  code: "abc131",
+  stock: 30,
+};
+const xbox = {
+  title: "xbox 360",
+  description: "de 250gb",
+  price: 9730,
+  thumbnail: "sin imagen",
+  code: "abc132",
   stock: 30,
 };
 
@@ -163,19 +211,30 @@ async function deleteProducts(id) {
   await productos.deleteProduct(id);
 }
 
+module.exports = ProductManager;
+
+
+
 //--------------------------TESTING---------------------------------
 
 //FUNCION PARA AGREGAR UN PRODUCTO
-productos.addProduct(pendriver);
-productos.addProduct(mouse);
-productos.addProduct(notebook);
-productos.addProduct(camara);
+
+// productos.addProduct(mouse);
+// productos.addProduct(notebook);
+// productos.addProduct(camara);
+// productos.addProduct(xbox);
+// productos.addProduct(router);
+// productos.addProduct(impresora);
+// productos.addProduct(tvLed);
+// productos.addProduct(homeTeather);
+// productos.addProduct(placaVideo);
+// productos.addProduct(monitor);
 
 // FUNCION PARA ELIMINAR UN PRODUCTO
-// deleteProducts(3);
+// deleteProducts(2);
 
 // FUNCION PARA ACTUALIZAR UN PRODUCTO
 // testUpdate(2, telefono);
 
 // FUNCION PARA BUSCAR UN PRODUCTO
-// testGetProductById(4);
+// testGetProductById(2);
